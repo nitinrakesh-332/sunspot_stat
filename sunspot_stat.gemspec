@@ -15,7 +15,7 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "sunspot_stat"
   gem.require_paths = ["lib"]
-  gem.version       = SunspotStats::VERSION
+  gem.version       = SunspotStat::VERSION
   
   gem.add_development_dependency "rspec"
   
