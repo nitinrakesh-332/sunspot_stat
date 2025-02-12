@@ -1,0 +1,25 @@
+# -*- encoding: utf-8 -*-
+require File.expand_path('../lib/sunspot_stat/version', __FILE__)
+
+Gem::Specification.new do |gem|
+  gem.authors       = ["nitin rakesh"]
+  gem.email         = ["nitinrak.25s@gmail.com"]
+  gem.description   = <<-TEXT
+      Sunspot is a library providing a powerful, all-ruby API for the Solr search engine. This gem extend sunspot adding the 
+      statsComponent feature, which returns simple statistics for indexed numeric fields within the DocSet.
+    TEXT
+  gem.summary       = "Added the statsComponent to sunspot"
+  gem.homepage      = "https://github.com/nitinrakesh-332/sunspot_stat"
+  gem.files         = `git ls-files`.split($\)
+  gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
+  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
+  gem.name          = "sunspot_stat"
+  gem.require_paths = ["lib"]
+  gem.version       = SunspotStats::VERSION
+  
+  gem.add_development_dependency "rspec"
+  
+  gem.rdoc_options << '--webcvs=http://https://github.com/nitinrakesh-332/sunspot_stat/tree/master/%s' <<
+                   '--title' << 'Sunspot Stat - StatsComponent for sunspot - API Documentation' <<
+                   '--main' << 'README.rdoc'
+end
